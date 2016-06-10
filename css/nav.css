@@ -1,0 +1,78 @@
+/*  Ralston Smith
+*   Simple Nav
+*   06.10.2016
+*   www.facebook.com/rgwds
+*   www.ralstonstudio.com
+*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+header {
+  background: #00795f;
+    width: 100%;
+    padding: 40px 0;
+    color: white;
+    text-align: center;
+}
+nav ul {
+    background: #43a286;
+    overflow: hidden;
+    color: white;
+    padding: 0;
+    text-align: center;
+    margin: 0;
+    /* css animation reveals the navigation */
+    -webkit-transition: max-height 0.4s;
+    -moz-transition: max-height 0.4s;
+    -o-transition: max-height 0.4s;
+    -ms-transition: max-height 0.4s;
+    transition: max-height 0.4s;
+    
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+nav ul li {
+    display: inline-block;
+    padding: 20px;
+}
+nav ul li:hover {
+    background-color: #399077;
+}
+section {
+    line-height: 1.5em;
+    font-size: 0.9em;
+    padding: 40px;
+    width: 75%;
+    margin: 0 auto;
+}
+.navMenu {
+    width: 100%;
+    background: #005c48;
+    box-sizing: border-box;
+    padding: 15px 10px;
+    cursor: pointer;
+    color: white;
+    display: none; /* Hide the Menu on screen larger than 580 */
+}
+@media screen and (max-width: 580px) {
+    .navMenu {
+        display: block; /* display the Menu on screen smaller than 580 */
+    }
+    nav ul {
+        max-height: 0px; /* hide the navigation on small screen, require script to show */
+    }
+    .show {
+        max-height: 20em; /* toggle this class with javascript or jquery */
+    }
+    nav ul li {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 15px;
+        text-align: left;
+    }
+}
